@@ -4,18 +4,38 @@ SaaS-приложение для создания цифровых пригла�
 
 ## Стек
 
-Next.js 15 (App Router) · TypeScript · Tailwind CSS v4 · Prisma + SQLite · Better Auth (email/пароль) · next-intl · Zod · next/og (серверный PNG).
+Next.js 15 (App Router) · TypeScript · Tailwind CSS v4 · Prisma + PostgreSQL (Neon) · Better Auth (email/пароль) · next-intl · Zod · next/og (серверный PNG).
+
+## База данных
+
+Приложение работает с PostgreSQL в Neon. Активная схема Prisma — `prisma/postgres/schema.prisma`, её миграции лежат в `prisma/postgres/migrations/` (путь указан в `package.json` → `prisma.schema`).
+
+- **Локально** используется ветка `dev` проекта Neon: впишите её адреса `DATABASE_URL` (через пул соединений) и `DATABASE_URL_UNPOOLED` (прямой) в `.env`.
+- **На Vercel** обе переменные создаёт интеграция Neon. Сборка (`npm run build`) только генерирует Prisma Client и **не меняет базу**. Миграции применяются вручную: `npm run db:deploy`.
+
+Старые файлы SQLite (`prisma/schema.prisma`, `prisma/migrations/`, `prisma/dev.db`, `prisma/dev.backup.db`) оставлены без изменений как архив и источник для переноса данных. Приложение их больше не использует.
+
+### Перенос данных из SQLite (однократно)
+
+```bash
+npm run db:transfer                                   # только план: читает SQLite (read-only), к PostgreSQL не подключается
+npm run db:deploy                                     # создать таблицы в целевой базе
+npm run db:transfer -- --apply --confirm-host=<host>  # копирование в пустую базу из DATABASE_URL, одной транзакцией
+npm run db:seed                                       # обновить текущие шаблоны по slug (id и старые шаблоны сохраняются)
+```
+
+Скрипт `scripts/transfer-sqlite-to-postgres.ts` переносит пользователей, хеши паролей, шаблоны (включая старые, на которые ссылаются приглашения), приглашения и подписки с исходными ID. Сессии не переносятся: пользователи просто входят заново. Если в целевой базе уже есть данные, скрипт ничего не пишет.
 
 ## Запуск
 
 ```bash
 npm install
-cp .env.example .env        # задайте BETTER_AUTH_SECRET
-npx prisma migrate dev      # создаёт prisma/dev.db и запускает seed шаблонов
+cp .env.example .env        # адреса ветки dev в Neon и BETTER_AUTH_SECRET
+npm run db:deploy           # применить миграции к ветке dev (если ещё не применены)
 npm run dev                 # http://localhost:3000
 ```
 
-Повторно заполнить шаблоны: `npm run db:seed`. Полный сброс базы: `npm run db:reset`.
+Повторно заполнить шаблоны: `npm run db:seed`. Команды сброса базы в npm-скриптах нет намеренно.
 
 ## Тарифы
 
