@@ -20,6 +20,30 @@
   --shadow-lift: 0 2px 4px rgba(46, 39, 34, 0.05), 0 24px 48px -16px rgba(46, 39, 34, 0.25);
 }
 
+.im-fonts {
+  --font-cormorant: "Cormorant Garamond", Garamond, Georgia, "Times New Roman", serif;
+  --font-playfair: "Playfair Display", Didot, "Bodoni MT", Georgia, serif;
+  --font-manrope: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-lora: "Lora", Georgia, "Times New Roman", serif;
+  --font-prata: "Prata", Didot, "Bodoni MT", Georgia, serif;
+  --font-great-vibes: "Great Vibes", "Segoe Script", "Brush Script MT", cursive;
+  --font-marck-script: "Marck Script", "Segoe Script", "Brush Script MT", cursive;
+  --font-philosopher: "Philosopher", "Trebuchet MS", system-ui, sans-serif;
+  --font-alice: "Alice", Georgia, "Times New Roman", serif;
+  --font-forum: "Forum", "Times New Roman", Georgia, serif;
+  --font-bad-script: "Bad Script", "Segoe Print", "Comic Sans MS", cursive;
+  --font-lobster: "Lobster", "Brush Script MT", "Segoe Script", cursive;
+  --font-comfortaa: "Comfortaa", "Varela Round", "Trebuchet MS", system-ui, sans-serif;
+  --font-unbounded: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --font-pacifico: "Pacifico", "Brush Script MT", "Segoe Script", cursive;
+  --font-yeseva: "Yeseva One", Didot, Georgia, serif;
+  --font-caveat: "Caveat", "Segoe Print", "Comic Sans MS", cursive;
+  --font-dela-gothic: "Dela Gothic One", "Arial Black", Impact, sans-serif;
+  --font-oswald: "Oswald", "Arial Narrow", Impact, system-ui, sans-serif;
+  --font-rubik-mono: "Rubik Mono One", "Arial Black", Impact, sans-serif;
+  --font-tenor: "Tenor Sans", "Gill Sans", "Trebuchet MS", system-ui, sans-serif;
+}
+
 @layer base {
   html {
     background: var(--color-ivory);

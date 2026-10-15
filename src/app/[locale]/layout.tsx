@@ -5,7 +5,7 @@ import { setRequestLocale } from "next-intl/server";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { routing } from "@/i18n/routing";
-import { fontVariables } from "@/lib/next-fonts";
+import { fontStylesheetHref, fontVariables } from "@/lib/next-fonts";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -29,6 +29,11 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={fontVariables}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="stylesheet" href={fontStylesheetHref} />
+      </head>
       <body className="flex min-h-dvh flex-col">
         <NextIntlClientProvider>
           <Header />
