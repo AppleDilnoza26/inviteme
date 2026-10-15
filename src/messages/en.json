@@ -1,0 +1,208 @@
+{
+  "common": {
+    "brand": "InviteMe",
+    "nav": {
+      "templates": "Templates",
+      "pricing": "Pricing",
+      "dashboard": "My invitations",
+      "login": "Sign in",
+      "register": "Start free",
+      "logout": "Sign out"
+    },
+    "planFree": "Free",
+    "planPro": "Pro",
+    "footer": "Digital invitations with the soul of fine stationery.",
+    "footerDemo": "Demo project. Payments run in test mode — no money is ever charged.",
+    "back": "Back",
+    "premium": "Premium",
+    "language": "Language"
+  },
+  "home": {
+    "eyebrow": "Digital invitations",
+    "title": "Invitations worth keeping",
+    "subtitle": "Design an elegant invitation for a wedding, birthday or party in minutes. Pick a template, add your details — and share something beautiful.",
+    "ctaPrimary": "Create an invitation",
+    "ctaSecondary": "Browse templates",
+    "featuresTitle": "Everything for a flawless invitation",
+    "features": {
+      "templates": { "title": "Designer templates", "text": "Classic, arches, minimal and botanical — in cream, blush and gold." },
+      "editor": { "title": "Live editor", "text": "Change text, fonts and palettes and see the result instantly." },
+      "export": { "title": "Ready to send", "text": "Download a high-quality invitation and send it to your guests." }
+    },
+    "stepsTitle": "Three steps to the perfect invitation",
+    "steps": {
+      "one": { "title": "Choose a template", "text": "Wedding, birthday, party or a special occasion." },
+      "two": { "title": "Add the details", "text": "Names, date, venue and a few warm words." },
+      "three": { "title": "Download & share", "text": "Send it via messenger or email." }
+    },
+    "showcaseTitle": "From our collection",
+    "finalTitle": "Start for free",
+    "finalText": "Three templates and three invitations for free. Pro unlocks the whole collection for just $4.99 a month."
+  },
+  "templates": {
+    "eyebrow": "Collection",
+    "title": "Template gallery",
+    "subtitle": "Choose the foundation for your invitation. Premium templates are included in Pro.",
+    "all": "All",
+    "categories": {
+      "wedding": "Wedding",
+      "birthday": "Birthday",
+      "party": "Party",
+      "other": "Special occasion"
+    },
+    "use": "Use template",
+    "creating": "Creating…",
+    "unlock": "Unlock with Pro",
+    "free": "Free",
+    "proOnly": "Included in Pro — $4.99/mo"
+  },
+  "editor": {
+    "back": "My invitations",
+    "tabEdit": "Text & style",
+    "tabPreview": "Preview",
+    "sectionText": "Text",
+    "sectionStyle": "Style",
+    "fields": {
+      "eyebrow": "Eyebrow",
+      "title": "Headline",
+      "subtitle": "Subtitle",
+      "message": "Message",
+      "date": "Date",
+      "time": "Time",
+      "venue": "Venue",
+      "address": "Address",
+      "footer": "Footer note"
+    },
+    "font": "Headline font",
+    "palette": "Palette",
+    "save": "Save",
+    "saving": "Saving…",
+    "saved": "Saved",
+    "saveAndFinish": "Save invitation",
+    "freeNote": "On Free you can edit an invitation once: after saving it goes to your dashboard, and editing it again requires Pro.",
+    "proNote": "Pro: save and come back to editing as often as you like.",
+    "download": "Download PNG",
+    "watermarkNote": "On Free the file is downloaded with a watermark.",
+    "error": "Could not save. Please try again."
+  },
+  "dashboard": {
+    "eyebrow": "Dashboard",
+    "greeting": "Hello, {name}",
+    "plan": "Your plan",
+    "counter": "{count} of {max} invitations",
+    "unlimited": "{count} invitations · unlimited",
+    "upgrade": "Upgrade to Pro",
+    "newInvitation": "New invitation",
+    "empty": "You have no invitations yet",
+    "emptyText": "Pick a template in the gallery — your first invitation takes a couple of minutes.",
+    "edit": "Edit",
+    "continue": "Continue",
+    "view": "Open",
+    "delete": "Delete",
+    "confirmDelete": "Delete this invitation?",
+    "download": "PNG",
+    "draft": "Draft",
+    "saved": "Saved",
+    "updated": "Updated {date}",
+    "proSince": "Pro is active (test subscription)",
+    "revertFree": "Switch back to Free (demo)"
+  },
+  "view": {
+    "back": "My invitations",
+    "edit": "Edit",
+    "download": "Download PNG"
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Simple, honest pricing",
+    "subtitle": "Start for free and move to Pro whenever you want more.",
+    "perMonth": "per month",
+    "freeName": "Free",
+    "freeTagline": "To try it out",
+    "proName": "Pro",
+    "proTagline": "For special occasions",
+    "freeFeatures": [
+      "3 basic templates",
+      "Up to 3 invitations",
+      "Text editing",
+      "Live preview",
+      "Saved projects"
+    ],
+    "proFeatures": [
+      "All templates, including premium",
+      "Unlimited invitations",
+      "Extra fonts and palettes",
+      "Watermark-free downloads",
+      "Re-open and edit saved projects"
+    ],
+    "current": "Your current plan",
+    "choosePro": "Upgrade to Pro",
+    "startFree": "Start for free",
+    "popular": "Recommended"
+  },
+  "checkout": {
+    "eyebrow": "Checkout",
+    "title": "InviteMe Pro",
+    "testBadge": "Test mode",
+    "testText": "This is a demo payment. No real payment provider is connected, no money is charged and card details are not sent anywhere.",
+    "summary": "Your order",
+    "planLine": "InviteMe Pro · monthly",
+    "total": "Due today",
+    "totalTest": "$0.00 (test)",
+    "cardName": "Name on card",
+    "cardNumber": "Card number",
+    "expiry": "Expiry",
+    "cvc": "CVC",
+    "testHint": "Use the test card 4242 4242 4242 4242, any future date and any CVC.",
+    "invalid": "Enter the test card 4242 4242 4242 4242.",
+    "pay": "Confirm test payment",
+    "processing": "Processing…",
+    "alreadyPro": "You already have Pro.",
+    "successTitle": "Welcome to Pro",
+    "successText": "Your test payment succeeded. All premium templates, fonts and palettes are now unlocked.",
+    "successNote": "No money was charged — this is a demo subscription.",
+    "goDashboard": "Go to my invitations",
+    "goTemplates": "Browse all templates"
+  },
+  "upgrade": {
+    "title": {
+      "invitationLimit": "Free invitation limit reached",
+      "premiumTemplate": "This is a premium template",
+      "premiumFont": "This font is part of Pro",
+      "premiumPalette": "This palette is part of Pro",
+      "reopen": "Editing again is a Pro feature"
+    },
+    "text": {
+      "invitationLimit": "The Free plan includes up to 3 invitations. Pro has no limits.",
+      "premiumTemplate": "Unlock the full template collection with Pro.",
+      "premiumFont": "Pro unlocks extra headline fonts.",
+      "premiumPalette": "Pro unlocks extra color palettes.",
+      "reopen": "On Free a saved invitation can be viewed and downloaded. Upgrade to Pro to edit it again."
+    },
+    "price": "Pro — $4.99 per month",
+    "cta": "Upgrade to Pro",
+    "later": "Maybe later"
+  },
+  "auth": {
+    "loginTitle": "Welcome back",
+    "loginSubtitle": "Sign in to continue working on your invitations.",
+    "registerTitle": "Create your account",
+    "registerSubtitle": "Free plan: 3 templates and 3 invitations.",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "At least 8 characters",
+    "submitLogin": "Sign in",
+    "submitRegister": "Create account",
+    "haveAccount": "Already have an account?",
+    "noAccount": "No account yet?",
+    "loginLink": "Sign in",
+    "registerLink": "Create one",
+    "error": "Could not sign in. Check your email and password.",
+    "registerError": "Could not create the account. This email may already be in use."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "back": "Back home"
+  }
+}

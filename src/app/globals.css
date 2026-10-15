@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #fbf8f3;
+  --color-cream: #f5eee3;
+  --color-sand: #ebdfcc;
+  --color-beige: #d9c7ad;
+  --color-powder: #e8c9c1;
+  --color-blush: #f3e1dc;
+  --color-gold: #b8975a;
+  --color-gold-deep: #96773f;
+  --color-ink: #2e2722;
+  --color-ink-soft: #6b5f55;
+  --color-line: #e6dccd;
+
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-manrope), "Manrope", system-ui, sans-serif;
+
+  --shadow-paper: 0 1px 2px rgba(46, 39, 34, 0.04), 0 12px 32px -12px rgba(46, 39, 34, 0.18);
+  --shadow-lift: 0 2px 4px rgba(46, 39, 34, 0.05), 0 24px 48px -16px rgba(46, 39, 34, 0.25);
+}
+
+@layer base {
+  html {
+    background: var(--color-ivory);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    font-family: var(--font-sans);
+    min-height: 100dvh;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  ::selection {
+    background: var(--color-powder);
+  }
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 999px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  .btn-primary {
+    background: var(--color-ink);
+    color: var(--color-ivory);
+  }
+  .btn-primary:hover:not(:disabled) {
+    background: #000;
+  }
+  .btn-gold {
+    background: linear-gradient(135deg, #c9a96a, #a8853f);
+    color: #fff;
+    box-shadow: 0 8px 20px -8px rgba(168, 133, 63, 0.6);
+  }
+  .btn-gold:hover:not(:disabled) {
+    filter: brightness(1.05);
+  }
+  .btn-ghost {
+    border: 1px solid var(--color-beige);
+    color: var(--color-ink);
+    background: transparent;
+  }
+  .btn-ghost:hover:not(:disabled) {
+    border-color: var(--color-gold);
+    background: var(--color-cream);
+  }
+  .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-gold-deep);
+    font-weight: 600;
+  }
+  .field {
+    width: 100%;
+    border: 1px solid var(--color-line);
+    background: #fffdf9;
+    border-radius: 0.75rem;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.925rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .field:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px rgba(184, 151, 90, 0.15);
+  }
+  .label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+    margin-bottom: 0.4rem;
+  }
+  .paper {
+    background: #fffdf9;
+    border: 1px solid var(--color-line);
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow-paper);
+  }
+  .gold-rule {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  }
+}
